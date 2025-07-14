@@ -1,0 +1,54 @@
+#include<iostream>
+using namespace std;
+
+enum enWeekDay {Sun=1,Mon,Tus,Wed,Thur,Fri,Sat};
+
+int ReadNumberInRange(string Message, int From, int To)
+{
+	int Number = 0;
+
+	do
+	{
+
+		cout << Message << endl;
+		cin >> Number;
+
+	} while (Number<From||Number>To);
+
+	return Number;
+}
+
+enWeekDay ReadDayOfWeek()
+{
+	return (enWeekDay)ReadNumberInRange("Please enter day number (Sun=1,Mon=2,Tus=3,Wed=4,Thur=5,Fri=6,Sat=7)",1,7);
+}
+
+string GetDayOfWeek(enWeekDay Day)
+{
+	switch (Day)
+	{
+	case enWeekDay::Sun:
+		return "Sunday";
+	case enWeekDay::Mon:
+		return "Monday";
+	case enWeekDay::Tus:
+		return "Tusday";
+	case enWeekDay::Wed:
+		return "Wednesday";
+	case enWeekDay::Thur:
+		return "Thursday";
+	case enWeekDay::Fri:
+		return "Friday";
+	case enWeekDay::Sat:
+		return "Saturday";
+	default:
+		return "Wrong Number";
+	}
+}
+
+int main()
+{
+	cout << GetDayOfWeek(ReadDayOfWeek()) << endl;
+	
+	return 0;
+}

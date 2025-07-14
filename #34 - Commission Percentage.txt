@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+
+int ReadTotalSales()
+{
+	int TotalSales;
+
+	cout << "Please enter your grade between 0 and 100 ?\n";
+	cin >> TotalSales;
+
+	return TotalSales;
+}
+
+float GetComissionPercentage(int TotalSales)
+{
+	if (TotalSales >= 1000000)
+		return 0.01;
+	else if (TotalSales >= 500000)
+		return 0.02;
+	else if (TotalSales >= 100000)
+		return 0.03;
+	else if (TotalSales >= 50000)
+		return 0.04;
+	else
+		return 0.0;
+}
+
+float GetTotalComission(int TotalSales)
+{
+	return GetComissionPercentage(TotalSales) * TotalSales;
+}
+
+int main()
+{
+	int TotalSales = ReadTotalSales();
+
+	cout << endl << "Comission Percentage is : " << GetComissionPercentage(TotalSales) << endl;
+	cout << endl << "Total Comission is : " << GetTotalComission(TotalSales) << endl;
+
+	return 0;
+}

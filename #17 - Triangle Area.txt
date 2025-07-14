@@ -1,0 +1,31 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+void ReadNumbers(float &A,float &H)
+{
+	cout << "Please enter triaangle base A ?\n";
+	cin >> A;
+
+	cout << "Please enter triaangle height H ?\n";
+	cin >> H;
+}
+
+float TriaangleArea(float A, float H)
+{
+	float Area = (A/2)*H;
+	return Area;
+}
+
+void PrintResult(float Area)
+{
+	cout << "\nThe triaangle Area is : " << Area << endl;
+}
+
+int main()
+{
+	float A,H;
+	ReadNumbers(A, H);
+	PrintResult(TriaangleArea(A, H));
+	return 0;
+}

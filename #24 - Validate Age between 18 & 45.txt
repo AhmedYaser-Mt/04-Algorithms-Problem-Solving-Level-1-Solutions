@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+short ReadAge()
+{
+	short Age;
+	cout << "Please enter your age ?\n";
+	cin >> Age;
+
+	return Age;
+}
+
+bool ValidateNumberinRange(int Number,int From,int To)
+{
+	return (Number >= From && Number <= To);
+}
+
+void PrintResult(int Age)
+{
+	if (ValidateNumberinRange(Age, 18, 45))
+		cout << Age << " is a valid age\n";
+	else
+		cout << Age << " is an invalid age\n";
+}
+
+int main()
+{
+	PrintResult(ReadAge());
+	return 0;
+}

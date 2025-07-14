@@ -1,0 +1,64 @@
+#include<iostream>
+using namespace std;
+
+enum enYearMonth {Jan=1,Feb,Mar,Apr,May,Jun,Jul,Aug,Sep,Oct,Nov,Dec};
+
+int ReadNumberInRange(string Message, int From, int To)
+{
+	int Number = 0;
+
+	do
+	{
+
+		cout << Message << endl;
+		cin >> Number;
+
+	} while (Number<From||Number>To);
+
+	return Number;
+}
+
+enYearMonth ReadMonthOfYear()
+{
+	return (enYearMonth)ReadNumberInRange("Please enter month number (Jan=1,Feb=2,Mar=3,Apr=4,May=5,Jun=6,Jul=7,Aug=8,Sep=9,Oct=10,Nov=11,Dec=12)",1,12);
+}
+
+string GetMonthOfYear(enYearMonth Month)
+{
+	switch (Month)
+	{
+	case enYearMonth::Jan:
+		return "January";
+	case enYearMonth::Feb:
+		return "February";
+	case enYearMonth::Mar:
+		return "March";
+	case enYearMonth::Apr:
+		return "April";
+	case enYearMonth::May:
+		return "May";
+	case enYearMonth::Jun:
+		return "June";
+	case enYearMonth::Jul:
+		return "July";
+	case enYearMonth::Aug:
+		return "August";
+	case enYearMonth::Sep:
+		return "September";
+	case enYearMonth::Oct:
+		return "October";
+	case enYearMonth::Nov:
+		return "November";
+	case enYearMonth::Dec:
+		return "December";
+	default:
+		return "Wrong Number";
+	}
+}
+
+int main()
+{
+	cout << GetMonthOfYear(ReadMonthOfYear()) << endl;
+	
+	return 0;
+}
