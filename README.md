@@ -1,6 +1,6 @@
 # 🚀 My Programming Journey with Abu Hadhoud (Programming Advices)
 
-After three months, I've completed the first four courses with **Abu Hadhoud (Programming Advices)**, and it has been a journey full of learning and growth.
+After three months, I've completed the first four courses with [AbouHadhood Platform](https://programmingadvices.com/)., and it has been a journey full of learning and growth.
 
 ---
 
